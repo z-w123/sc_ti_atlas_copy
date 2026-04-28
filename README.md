@@ -73,7 +73,7 @@ Once you have our data the following commands can be ran to reproduce the key an
 
 ## Generate the various cohorts and subsets for the analyses
 
-Split the ti_full_cohort.h5ad into discovery and replication cohorts as well as the subsets for the DGE analysis.
+Split the ti_full_cohort.h5ad **Full_cohort.h5ad** into discovery and replication cohorts as well as the subsets for the DGE analysis.
 
 ``` shell
 singularity exec -B $PWD:/data containers/sc_python.sif
