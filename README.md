@@ -48,7 +48,7 @@ bash scripts/run-qc_cluster.sh
 Once the atlas is generated, the following command can be used to generate a CellTypist model for the ileal cell types. The model can then be used to auto-annotate the pre-QC data.
 
 ```shell
-singularity exec -B $PWD:/data containers/sc_python.sif
+singularity exec -B $PWD:/data containers/sc_python.sif # this line is not required if you simply module load the softpack sc_env in the cluster
 python ./train_celltypist.py \
     --h5 data/ti-atlas.h5ad \
     --annotation cluster \
