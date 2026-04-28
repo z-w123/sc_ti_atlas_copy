@@ -9,7 +9,8 @@ A repository containing the code, data and information required to reproduce the
 
 ## Installation and data
 
-Firstly, we use a combination of pip and singularity to manage the software environments. To install pip, follow the instructions on the [pip installation page](https://pip.pypa.io/en/stable/installation/). And to install singularity, follow the instructions on the [singularity installation page](https://sylabs.io/guides/3.0/user-guide/installation.html).
+Firstly, we use Singularity for containerized software environments and pip for Python package installation.
+To install pip, follow the instructions on the [pip installation page](https://pip.pypa.io/en/stable/installation/). And to install singularity, follow the instructions on the [singularity installation page](https://sylabs.io/guides/3.0/user-guide/installation.html).
 
 Next, *git lfs is required* to download the large files in one of the submodules. To install git lfs, visit the [git lfs installation page](https://git-lfs.com/) and follow the instructions for your system.
 
@@ -29,12 +30,8 @@ Note: This command will recursively clone other GitHub repositories which are ne
  ┗ 📦sc_nf_diffexpression
 ```
 
-Finally to ensure you have the required the dependencies you can use the singularity containers provided in our Zenodo archive: https://zenodo.org/record/14276773. Download the `containers.tar.gz` file and extract it into the root of this repository.
+Finally to ensure you have the required the dependencies, download the 'dge_env' and 'heritability_env' images provided at this Docker page: https://hub.docker.com/repository/docker/alegbe/ . These can then be converted to Singularity containers locally. [TBA: Add command to do this]
 
-``` shell
-wget https://zenodo.org/record/14276773/files/containers.tar.gz?download=1 -O containers.tar.gz
-tar -xvzf containers.tar.gz
-```
 
 ## Start from either a) Initial quality control and clustering
 
