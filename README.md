@@ -48,8 +48,7 @@ bash scripts/run-qc_cluster.sh
 Once the atlas is generated, the following command can be used to generate a CellTypist model for the ileal cell types. The model can then be used to auto-annotate the pre-QC data.
 
 ```shell
-singularity exec -B $PWD:/data containers/sc_python.sif # this line is not required if you simply module load the softpack sc_env in the cluster
-python ./train_celltypist.py \
+singularity exec -B $PWD:/data containers/sc_python.sif 
     --h5 data/ti-atlas.h5ad \
     --annotation cluster \
     --gene_symbols \
@@ -76,7 +75,8 @@ Once you have our data the following commands can be ran to reproduce the key an
 Split the **Full_cohort.h5ad** into discovery and replication cohorts as well as the subsets for the DGE analysis.
 
 ``` shell
-singularity exec -B $PWD:/data containers/sc_python.sif
+singularity exec -B $PWD:/data containers/sc_python.sif # this line is not required if you simply module load the softpack sc_env in the cluster
+python ./train_celltypist.py \
 
 # For the TI cohorts
 cohorts=("Discovery" "Replication" "Full")
