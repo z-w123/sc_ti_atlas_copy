@@ -30,7 +30,10 @@ Note: This command will recursively clone other GitHub repositories which are ne
  ┗ 📦sc_nf_diffexpression
 ```
 
-Finally to ensure you have the required the dependencies, download the 'dge_env' and 'heritability_env' images provided at this Docker page: https://hub.docker.com/repository/docker/alegbe/ . These can then be converted to Singularity containers locally. [TBA: Add command to do this]
+Finally to ensure you have the required the dependencies, download the 'dge_env' and 'heritability_env' images provided at this Docker page: https://hub.docker.com/repository/docker/alegbe/ . You can also directly convert these Docker images to Singularity containers to use on a HPC cluster, e.g.:
+```
+singularity pull dge_env.sif docker://docker.io/alegbe/dge_env:3
+``` 
 
 
 ## Start from either a) Initial quality control and clustering
