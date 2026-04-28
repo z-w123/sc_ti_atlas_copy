@@ -59,14 +59,15 @@ python ./train_celltypist.py \
 ## Or start from b) Annotated anndata
 
 If you would like to skip the resource intensive QC and clustering steps, the annotated AnnData objects can be found here:
-https://zenodo.org/records/14276773
+[TBA: link to datafiles]
 
 ``` shell
 mkdir -p data/anndata
-wget https://zenodo.org/record/14276773/files/ti_atlas_cohort-clustered.h5ad?download=1 -O data/anndata/ti_atlas.h5ad
-wget https://zenodo.org/record/14276773/files/ti_full_cohort-auto.h5ad?download=1 -O data/anndata/ti_full_cohort.h5ad
-wget https://zenodo.org/record/14276773/files/organoid-auto.h5ad?download=1 -O data/anndata/organoid.h5ad
 ```
+datafiles are:
+Atlas_cohort.h5ad
+Full_cohort.h5ad
+Organoid.h5ad
 
 Once you have our data the following commands can be ran to reproduce the key analyses found in our paper.
 
