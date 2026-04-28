@@ -67,6 +67,7 @@ datafiles are:
 Atlas_cohort.h5ad
 Full_cohort.h5ad
 Organoid.h5ad
+(and maybe the Discovery_cohort.h5ad aswell)
 
 Once you have our data the following commands can be ran to reproduce the key analyses found in our paper.
 
@@ -84,10 +85,10 @@ tissue="TI"
 for COHORT in "${cohorts[@]}"; do
     for EXCLUDE in "${excludes[@]}"; do
     python -u subset_anndata.py \
-        --adata data/anndata/ti_full_cohort.h5ad \
+        --adata data/anndata/Full_cohort.h5ad \
         --cohort $COHORT \
         --exclusions $EXCLUDE \
-        --metadata "data/metadata/individual_metadata.tsv" \
+        --metadata "data/metadata/individual_metadata.tsv" \ ## where is this file?
         --tissue $tissue \
         --out_dir data/anndata/ 
     done
