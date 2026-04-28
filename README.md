@@ -77,7 +77,7 @@ Split the **Full_cohort.h5ad** into discovery and replication cohorts as well as
 ``` shell
 singularity exec -B $PWD:/data containers/sc_python.sif # this line is not required if you simply module load the softpack sc_env in the cluster
 
-# For the TI cohorts
+# For the TI cohorts ##[TBA: correct 'ti' naming]
 cohorts=("Discovery" "Replication" "Full")
 excludes=("CD-inflamed" "CD-uninflamed" "Healthy-uninflamed" "CD-All")
 tissue="TI"
